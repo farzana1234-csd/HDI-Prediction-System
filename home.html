@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HDI Prediction</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #0a1428, #1a2a4a);
+            color: white;
+            font-family: 'Times New Roman', serif;
+            text-align: center;
+            padding-top: 60px;
+            min-height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #e63946;
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+        form {
+            margin-top: 40px;
+        }
+        input {
+            display: block;
+            margin: 15px auto;
+            padding: 10px;
+            width: 280px;
+            border-radius: 20px;
+            border: none;
+            text-align: center;
+            font-size: 14px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 40px;
+            border-radius: 20px;
+            border: none;
+            background: linear-gradient(to right, #6a5acd, #8a2be2);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+    <h1>Human Development Index</h1>
+    <form method="POST" action="/predict">
+        <input type="number" step="any" name="life_expectancy" placeholder="Enter Life Expectancy (years)" required>
+        <input type="number" step="any" name="expected_schooling" placeholder="Enter Expected Years of Schooling" required>
+        <input type="number" step="any" name="mean_schooling" placeholder="Enter Mean Years of Schooling" required>
+        <input type="number" step="any" name="gni" placeholder="Enter GNI per Capita ($)" required>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
